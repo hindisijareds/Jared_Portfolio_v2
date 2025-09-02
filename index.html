@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Jared's Portfolio</title>
+
+    <link rel="icon" href="assets/images/logojared.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&amp;display=swap">
+
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+.overlay-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0; 
+    transition: background-image 0.3s ease, opacity 0.3s ease, backdrop-filter 0.3s ease;
+   
+}
+
+
+body[data-bs-theme="light"] .overlay-image {
+    background-image: url('assets/images/download.png');
+}
+
+
+body[data-bs-theme="dark"] .overlay-image {
+    background-image: url('assets/images/darktheme.jpg');
+}
+
+
+.content, header, footer, .social-sidebar {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+  .content, header, footer, .social-sidebar {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+</head>
+
+<body data-bs-theme="dark" data-bs-spy="scroll" data-bs-target="#navbar">
+ <div class="overlay-image"></div>
+<div id="particles-js"></div>
+
+
+    
+ 
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-expand-md">
+            <div class="container">
+                <div data-aos="fade-up" data-aos-delay="300">
+            <img id="logo" src="assets/images/logojared.png" style="width: 100px; height: 100px;" class="img-fluid pic" alt="About Me Portrait">
+
+                </div>
+            
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarMenu">
+                    <div class="offcanvas-header">
+                       <div>
+            <img id="logo" src="assets/images/logojared.png" style="width: 60px; height: 60px; margin-bottom: px ;" class="img-fluid logo" alt="About Me Portrait">
+
+                </div>
+                        <button type="button" class="navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close Navigation Menu"><i class="bi bi-x toggle-icon"></i></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav nav-underline justify-content-end flex-grow-1">
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="500" data-bs-dismiss="offcanvas"><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="600" data-bs-dismiss="offcanvas"><a href="#about" class="nav-link">About</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="700" data-bs-dismiss="offcanvas" ><a href="#skills" class="nav-link">Skills</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="800" data-bs-dismiss="offcanvas"><a href="#projects" class="nav-link">Gallery</a></li>
+                            <li class="nav-item" data-aos="fade-down" data-aos-delay="1000" data-bs-dismiss="offcanvas"><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 
+                <button onclick="toggleInvert()" class="btn border-0" id="switchTheme" data-aos="fade-down" data-aos-delay="600"><i class="bi bi-brightness-high-fill"></i></button>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle Navigation Menu" data-aos="fade-down" data-aos-delay="600"><i class="bi bi-list toggle-icon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        
+        <div class="container">     
+            <div class="row about-content">
+                <div class="col-lg-5 col-sm-7 col-md-7 col-12 order-lg-2">
+                    <div class="pic" data-aos="fade-up" data-aos-delay="600">
+                        <img src="assets/images/jaredface.jpg" style="width: 40%; height: auto; max-width: 40%;" class="img-fluid d-block mx-auto" alt="About Me Portrait">
+                    </div>
+                    
+                </div>
+                <div class="col-lg-5 col-sm-7 col-md-7 col-12 order-lg-2 hero-content">
+                    <span class="h3" data-aos="fade-up" data-aos-delay="0">Hello, I'm</span>
+                    <h1 class="name fw-bold" data-aos="fade-up" data-aos-delay="200"><span>Jared Estabillo</h1>
+                      <h4 class="mt-2" data-aos="fade-up" data-aos-delay="300">
+                   <span class="typed-text"></span>
+                </h4>
+
+   <div data-aos="fade-up" data-aos-delay="300">
+                <button type="button" class="btn btn-sm mt-3 mb-3 btn-showcase" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-stars"></i> Bachelor of Science in Information Technology
+                </button></div>
+                <p class="mb-3" data-aos="fade-up" data-aos-delay="600">Started my journey in web development during <span class="underline">Senior High School</span> during 2023. Now, a <span class="underline">College Student</span>, I'm creating beautiful and responsive websites along with other cool projects.</p>
+                    
+                    <div class="d-flex call-to-action">
+                        <a href="#contact" data-aos="fade-up" data-aos-delay="700"><button type="button" class="btn me-4 primary-bg-btn"><i class="bi bi-envelope"></i> Contact Me</button></a>
+                        <a href="#projects" data-aos="fade-up" data-aos-delay="700"><button type="button" class="btn me-4 secondary-bg-btn">View Portfolio <i class="bi bi-arrow-up-right-circle"></i></button></a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <p class="text-center copyright-text">Made with <span>Bootstrap, HTML, CSS, JS</span> and a dash of <span class="heart-icon"><i class="bi bi-hearts"></i></span> by <span>Jared</span>.</p>
+        </div>
+    </footer>
+
+    
+<script>
+function toggleInvert() {
+    const img = document.getElementById("logo");
+    img.classList.toggle("inverted");
+   
+}
+
+</script>
+ <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Web</i> Developer.', '&amp; Programmer'],
+      typeSpeed: 50,
+    });
+  </script>
+
+    <script src="assets/js/aos.js" defer></script>
+    <script src="assets/js/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/owl.carousel.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    new Typed(".typed-text", {
+      strings: ["I Love Coding", "I Code Cool Websites", "I Can Program Anything", "I Love Games", "I'am Handsome", "I Love You"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true,
+    smartBackspace: false  
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 50 },
+    "color": { "value": "#b71c1c" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "line_linked": { "enable": true, "distance": 150, "color": "#b71c1c", "opacity": 0.2, "width": 1 },
+    "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
+  },
+  "interactivity": {
+    "events": { "onhover": { "enable": true, "mode": "repulse" } }
+  }
+});
+</script>
+
+
+
+
+
+<div class="social-sidebar d-flex flex-column align-items-center position-fixed top-50 end-0 translate-middle-y me-4">
+
+    <a href="https://github.com/hindisijareds" target="_blank" class="social-icon mb-3"><i class="bi bi-github"></i></a>
+    <a href="https://www.instagram.com/hindisijared" target="_blank" class="social-icon mb-3"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.facebook.com/hindisijaredd" target="_blank" class="social-icon mb-3"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.tiktok.com/@hindisijared" target="_blank" class="social-icon mb-3"><i class="bi bi-tiktok"></i></a>
+
+    <div class="d-flex flex-column align-items-center mt-4 line-text">
+        <div class="line mb-2"></div>
+        <span class="text-uppercase fw-bold">FOLLOW ME</span>
+    </div>
+</div>
+
+
+</body>
+</html>
