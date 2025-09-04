@@ -140,4 +140,75 @@ const images = document.querySelectorAll(".kupal");
 
         ;
 
+  const konamiCode = [
+    "ArrowUp", "ArrowUp",
+    "ArrowDown", "ArrowDown",
+    "ArrowLeft", "ArrowRight",
+    "ArrowLeft", "ArrowRight",
+    "b", "a"
+  ];
+
+  let userInput = [];
+
+  document.addEventListener("keydown", (e) => {
+    userInput.push(e.key);
+    if (userInput.length > konamiCode.length) {
+      userInput.shift();
+    }
+
+    if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+      activateEasterEgg();
+    }
+  });
+
+  function activateEasterEgg() {
+    // Dark background overlay
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    overlay.style.display = "flex";
+    overlay.style.flexDirection = "column";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9999";
+    document.body.appendChild(overlay);
+
+    // Ghost arm
+    const ghostArm = document.createElement("div");
+    ghostArm.innerText = "👻🦾";
+    ghostArm.style.fontSize = "8rem"; // bigger
+    ghostArm.style.animation = "floatArm 3s ease-in-out infinite";
+    overlay.appendChild(ghostArm);
+
+    // Text
+    const msg = document.createElement("div");
+    msg.innerText = "I Love You ❤️";
+    msg.style.fontSize = "3rem"; // bigger text
+    msg.style.fontWeight = "bold";
+    msg.style.color = "#ff4d4d";
+    msg.style.textShadow = "0 0 12px white, 0 0 24px red";
+    msg.style.marginTop = "20px";
+    overlay.appendChild(msg);
+
+    // Remove after 5s
+    setTimeout(() => {
+      overlay.remove();
+    }, 5000);
+  }
+
+  // Floating animation
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes floatArm {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  `;
+  document.head.appendChild(style);
+
+
         
